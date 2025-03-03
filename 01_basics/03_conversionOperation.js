@@ -34,6 +34,29 @@ let stringsomeNumber = String(someNumber)
 console.log(stringsomeNumber);
 console.log(typeof stringsomeNumber);
 
+// ****************************  Operations  *******************************************
+
+let value = 3
+let negValue = -value
+
+console.log(negValue);
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2/2);
+// console.log(2*2);
+// console.log(2**2);
+// console.log(2%2);
+
+let str1 = "hi "
+let str2 = "reet"
+
+let str3 = (str1 + str2)
+console.log(str3);
+
+
+
+
 
 
 
