@@ -24,15 +24,15 @@
 // let isLoggedIn = "thakur" //o/p true
 
 
-let booleanIsLoggedIn = Boolean(isLoggedIn)
-console.log(booleanIsLoggedIn);
+// let booleanIsLoggedIn = Boolean(isLoggedIn)
+// console.log(booleanIsLoggedIn);
 
 
 let someNumber = 27
 
-let stringNumber = String(someNumber)
-console.log(stringNumber);
-console.log(typeof stringNumber);
+let stringsomeNumber = String(someNumber)
+console.log(stringsomeNumber);
+console.log(typeof stringsomeNumber);
 
 
 
