@@ -28,18 +28,18 @@
 // console.log(booleanIsLoggedIn);
 
 
-let someNumber = 27
+// let someNumber = 27
 
-let stringsomeNumber = String(someNumber)
-console.log(stringsomeNumber);
-console.log(typeof stringsomeNumber);
+// let stringsomeNumber = String(someNumber)
+// console.log(stringsomeNumber);
+// console.log(typeof stringsomeNumber);
 
 // ****************************  Operations  *******************************************
 
-let value = 3
-let negValue = -value
+// let value = 3
+// let negValue = -value
 
-console.log(negValue);
+// console.log(negValue);
 
 // console.log(2+2);
 // console.log(2-2);
@@ -48,11 +48,40 @@ console.log(negValue);
 // console.log(2**2);
 // console.log(2%2);
 
-let str1 = "hi "
-let str2 = "reet"
+// let str1 = "hi "
+// let str2 = "reet"
 
-let str3 = (str1 + str2)
-console.log(str3);
+// let str3 = (str1 + str2)
+// console.log(str3);
+
+// console.log(1 + "2");
+// console.log("1"+2+2);
+// console.log(1+2+"2");
+// console.log((1+1)-2*3%5);
+
+// console.log(+true);
+// console.log(""+);
+
+// let num1,num2,num3
+
+// num1 = num2 = num3 = 2+2
+
+let gameCounter = 90
+
+++gameCounter;
+gameCounter++;
+console.log(gameCounter); //study about the prefix and postfix from MDN
+
+
+
+
+
+
+
+
+
+
+
 
 
 
