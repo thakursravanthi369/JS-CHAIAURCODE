@@ -50,6 +50,38 @@ console.log(typeof myFunction); //objectfunction
 //https://262.ecma-international.org/5.1/#sec-11.4.3 link to read
 
 
+// STACK AND HEAP MEMORY
+
+//stack (primitive) - for static memory storage...  & heap (non-primitive) - for dynamic memory storage...
+
+//for stack ex: get the copy value...
+
+let myYoutubeName = "thakursravanthi"
+
+let anotherName =  myYoutubeName
+anotherName = "thakur"
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+//for heap ex: get the original or refernce value...
+
+let userOne = {
+    email : "thakur@google.com",
+    upi : "user@ybl"
+
+}
+
+let userTwo = userOne  
+
+userTwo.email = "user@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+
+
+
 
 
 
