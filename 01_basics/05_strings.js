@@ -1,4 +1,4 @@
-// const name = "thakur"
+// const name = "thakur" //method1 to use string to write
 // const repoCount = 50
 
 // console.log(name + repoCount + "value"); not recommended
@@ -7,7 +7,7 @@
 
 // console.log(`hello my name ${name} and my repoCount is ${repoCount}`);
 
-// const gameName = newString('thakur') // when ever v use 'new' key word v use objects...
+// const gameName = newString('thakur') //method2 to use new keyword with string and when ever v use 'new' key word v use objects... 
 
 // console.log(gameName[0]); 
 // console.log(gameName.__proto__); //for which function v use proto
