@@ -30,6 +30,37 @@
 
 // ============================== Maths =================================
 
+// console.log(Math);
+// console.log(Math.abs(-25943)); //its gives negative value into positive sign... abs means absolut
+// console.log(Math.round(4.6)); //gives round fogure value
+// console.log(Math.ceil(4.2)); //takes top value
+// console.log(Math.floor(4.9)); //takes less value
+// console.log(Math.min(3,5,9,5));
+// console.log(Math.max(3,5,8));
+
+console.log(Math.random());
+console.log((Math.random()*10) + 1); //!the random value always in between 0 to 1 so to ensure the value of 0 to 1 v keep +1 to not toget 0 values with *10...in barcket
+console.log(Math.floor(Math.random()*10) + 1); //it give lowest value with round figure.....
+
+const max = 50
+const min = 20
+
+console.log(Math.random() * (max - min + 1) + min);
+console.log(Math.floor(Math.random() * (max - min + 1) + min));
+console.log(Math.ceil(Math.random() * (max - min + 1) + min));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
