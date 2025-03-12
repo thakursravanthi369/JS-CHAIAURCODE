@@ -76,5 +76,5 @@ function secondValue(getArray){
 }
 
 // console.log(secondValue(myNewArray)); //passing key 
-console.log(secondValue( [200,300,500,1000])); //passing value...........the result will be same
+console.log(secondValue( [200,300,500,1000])); //passing value...........the result will be samee
 
