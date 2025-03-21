@@ -53,12 +53,46 @@
 
 // one()
 
-if (true) {
-   const username = "reet"
-    if (username === "reet") {
-        const webPage = " youtube"
-        console.log(username + webPage);    
-    }
-    console.log(webPage);
-}
-console.log(username);
+// if (true) {
+//    const username = "reet"
+//     if (username === "reet") {
+//         const webPage = " youtube"
+//         console.log(username + webPage);    //Inside of the scope
+//     }
+//     console.log(webPage); //out off the scope
+// }
+// console.log(username); //out off the scope
+
+//++++++++++++++++++++++++++ Interesting +++++++++++++++++++++++++
+
+// function addOne(num){
+//     return num + 1
+// }
+// addOne(5)  //declaring function method1
+
+// addOne(5)
+// function addOne(num){
+//     return num + 1
+// }                           //no error if v declare addOne top of the function
+
+console.log(addOne(5));
+function addOne(num){
+    return num + 1
+} 
+
+
+// const addTwo = function(num){
+//     return num + 2
+// }
+// addTwo(6)                   //method2 of declaring function
+
+
+addTwo(6)
+const addTwo = function(num){
+         return num + 2
+     }                      //there will be error if mention top off it,bez here the key hold in const variable...the function 
+                                // declare in different way.....
+      
+
+
+
