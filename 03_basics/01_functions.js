@@ -1,4 +1,3 @@
-
 // function sayMyName(){ //() this barcket represent function....
 //     console.log("r");
 //     console.log("e");
