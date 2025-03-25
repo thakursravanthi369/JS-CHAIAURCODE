@@ -61,6 +61,3 @@
 const addTwo = (num1 , num2) => ({username: "reethu"}) //in this kind of case the object showuld be in parenthesis ()....
 
 console.log(addTwo(1,2));
-
-
- 
