@@ -1,9 +1,9 @@
 // const coding = ["js", "ruby", "java", "python", "cpp"]
 
 
-// const values = coding.forEach( (item) => {   //here foreach stores in values as undefined
-//     //console.log(item);
-//     return item   //here v can't return anything in forEach
+// const values = coding.forEach( (shop) => {   //here foreach stores in values as undefined
+//     //console.log(shop);
+//     return shop   //here v can't return anything in forEach
 // } )
 
 // console.log(values);    //undefined
