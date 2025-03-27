@@ -35,8 +35,8 @@
 
 // languages.forEach(printLanguage);
 
-// languages.forEach( (items , index, arr) => {  //items is a variable name, it can be anything and in the function the parameter,index and arr are optional 
-//  console.log(items, index, arr);
+// languages.forEach( (shops , index, arr) => {  //shops is a variable name, it can be anything and in the function the parameter,index and arr are optional 
+//  console.log(shops, index, arr);
 // }) 
 
 const myCoding = [ 
@@ -58,8 +58,8 @@ const myCoding = [
         }
 ];
 
-myCoding.forEach((item) => {   //here v accessing long amount of data from the object using forEach loop
-    console.log(item.name);
+myCoding.forEach((shop) => {   //here v accessing long amount of data from the object using forEach loop
+    console.log(shop.name);
 })  
 
 
