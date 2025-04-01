@@ -1,0 +1,117 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM learning</title>
+    </head>
+    <body>
+        <div class="bg_black">
+            <h1 id="title" class="heading">DOM learning on Chai aur code</h1>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <input type="password" name="" id="">
+          
+            <ul>
+                <li class="list">one</li>
+                <li class="list">two</li>
+                <li class="list">three</li>
+                <li class="list">four</li>
+            </ul>
+        </div>
+    </body>
+    </html>
+
+    //to access the code 
+    //method1 to traget the element
+
+    //for single element with whole para
+    -document.getElementById('title')  - o/p <h1 id="title" class="heading">DOM learning on Chai aur code</h1>
+
+    //accesing the only praticular word
+    -document.getElementById('title').id - o/p 'title'
+    -document.getElementById('title').className - o/p "heading" //by className v can access the class not with only writing class.
+
+    //accesing the attributes
+    -document.getElementById('title').getAttribute('id') - o/p 'title'
+    -document.getElementById('title').getAttribute('class') - 'heading'
+
+    //setting the attributes - set attribute always overwrite the value
+    -document.getElementById('title').setAttribute('class','setheading') - o/p 'setheading'
+
+    //storing the element
+    -const title = document.getElementById('title') - o/p  <h1 id="title" class="heading">DOM learning on Chai aur code</h1>
+    //now easyly v can access the title, now the title is a Object
+
+    //styling with the Objcet - title
+    -title.style.backgroundColor = 'red'  - o/p 'red'
+    -title.style.padding = '15px' - o/p '15px'
+    -title.style.radius = '20px' - o/p '20px'
+
+  //the o/p will be same but while chaging it will be different
+  -title.textContent - o/p 'DOM learning on Chai aur code test text'  //here the o/p will be changed according the changes, give the o/p with the changes
+  -title.innerHTML - o/p 'DOM learning on Chai aur code'  //here the o/p will be changed according the changes and give the o/p with HTML tags....
+ -title.innerText - o/p 'DOM learning on Chai aur code' //here the o/p will be not changed according the changes ,not give the o/p with the changes
+
+  //!!important realworld usage tags of querySelector - //in querySelector v can use all css tags to get the data from html.....
+  -document.querySelector('#title') - o/p  <h1 id="title" class="heading"></h1>
+  -document.querySelector('h2') - o/p  <h2>Lorem ipsum dolor sit amet.</h2>
+  -document.querySelector('.heading') - o/p <h1 id="title" class="heading"></h1>
+  -document.querySelector('input[type='password']') - o/p   <input type="password" name="" id="">
+
+  //querySelector with variables for singleElements
+  eg1-document.querySelector('ul') - take the tag for the query
+  --const myul = document.querySelector('ul') - stored in myul
+  -myul.querySelector('li') - take the tag from ul of li which it takes first tag
+  --const turnGreen = myul.querySelector('li') - it stored in turngreen
+    turnGreen.style.backgroundColor = 'green' - in the new variable v can change multiple changes in it....
+    turnGreen.style.padding = '15px' - like this all css changes can be done
+
+ eg2-turnGreen.innerText - o/p 'one'
+ eg3-turnGreen.innerText = 'five' - //the o/p will be changes one to five...
+
+
+ //querySelectorAll with variables for mutipleElements with NodeList
+ eg1-document.querySelectorAll('li') -  take the tag
+ --const tempLiList = document.querySelectorAll('li') - stored in tempLiList
+ ---in tempLiList //- the NodeList(3) [li,li,li] - o/p 0-'li', 1-'li' , 2-'li' //the NodeList looks like array but its not array
+ --tempLiList[0].style.color = 'green' o/p 'green' -//here v have to take the NodeList for each element of the node if v wants to change the original values...
+ 
+ eg2-tempLiList - o/p [li,li,li]
+ ---tempLiList.forEach((l) => {
+       l.style.backgroundColor = 'red' - o/p the all item which v take l changed into 'red'
+ })
+//!! In querySelectorAll there will be a NodeList with the NodeList multiple elements can be access and also in NodeList tehre will be elements which v can access  like forEach,keys,length so on..... 
+//!! If v want to keep map on element v should convent NodeList into Array.....and when ever v r using NodeList mostly have to use forEach
+
+//conventing NodeList into Array
+eg1-document.getElementsByClassName('list')
+---const myList = document.getElementsByClassName('list')
+--Array.from(myList) 
+---const converntedArray = Array.from('myList') 
+--converntedArray.forEach((l) => {    
+  l.style.color = 'red';
+  l.style.backgroundColor = 'green';
+  l.style.padding = '10px';
+})
+
+
+//with querySelectorAll
+eg1-document.getElementsByClassName('h1')
+   -const myH = document.getElementsByClassName('h1')
+   -myHh1[0].innerText - like this v can maluplate the website
+   -myHh1.forEach((h1) => {
+    h1.style.color = 'red';
+    h1.style.backgroundColor = 'green';
+    h1.style.padding = '10px';
+    h1.innerText = 'reet';
+   })
+
+
+
+
+
+
+
