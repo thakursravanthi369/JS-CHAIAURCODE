@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+      <ul class="language">
+        <li>Javascript</li>
+      </ul>
+</body>
+<script>
+    //here the adding elements will be at the bottom of the code its a traversing....optimaze will be effected sometimes....so for basic projects recommanded
+  // eg1: 
+   function addLanguage(LangName){
+    const li =  document.createElement('li');
+    li.innerHTML = `${LangName}`
+    document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("typescript")
+
+//optimaze way
+//eg2: 
+function addOptiLanguage(langName){
+const li = document.createElement('li');
+li.appendChild(document.createTextNode(langName))
+document.querySelector('.language').appendChild(li)
+}
+addOptiLanguage('html')
+addOptiLanguage('css')
+
+//eg3:
+// function letsTry(trying){
+//    const li = document.querySelector('li');
+//    li.appendChild(document.createTextNode(trying))
+//    document.querySelector('.language').appendChild(li)
+// }
+// letsTry('me')
+// letsTry('oye')
+
+// //Edit means replacing the elements
+// //eg1:
+// const secondLang = document.querySelector('li:nth-child(2)')
+// //secondLang.innerHTML = ',Mojo' 
+// const newli = document.createElement('li')
+// newli.textContent = 'Mojo'
+// secondLang.replaceWith(newli)
+
+// //eg2:
+// const firstLang = document.querySelector('li:first-child')
+// firstLang.outerHTML = '<li>Backend</li>'
+
+
+// //remove
+// const lastLang = document.querySelector('li:last-child')
+// lastLang.remove()
+
+
+</script>
+</html>
