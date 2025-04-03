@@ -18,16 +18,19 @@ html {
     display: inline-block;
   }
   
-  #grey {
-    background: grey;
+  #navy {
+    background: navy;
   }
   
-  #white {
-    background: white;
+  #red {
+    background: red;
   }
-  #blue {
-    background: blue;
+  #green {
+    background:green;
   }
-  #yellow {
-    background: yellow;
+  #pink {
+    background: pink;
+  }
+  #purple {
+    background: purple;
   }
