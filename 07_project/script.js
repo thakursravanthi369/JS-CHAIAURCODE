@@ -1,8 +1,8 @@
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 
-// buttons.forEach((button)=> {
-//     button.addEventListener('click',(e) => {
+buttons.forEach((button)=> {
+    button.addEventListener('click',(e) => {
 //       if (e.target.navy === 'navy') {
 //         body.style.backgroundColor = 'navy';        //method1 targeting with the name
 //       }
