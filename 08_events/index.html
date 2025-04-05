@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" > <!-- onclick="alert('owl')" --> </li> <!-- onclick="alert('owl')" this approch is not a scaleable in js...m1 -->
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+
+ //method to remove the image r elements...   
+ document.querySelector('#images').addEventListener('click' , function(e){
+    console.log(e.target.parentNode);
+    let removeIt = e.target.parentNode
+     removeIt.remove();    //m1
+    // removeIt.parentNode.childNode(removeIt); //m2
+ },false);  //here the whole ul and li removing but v want only to remove img so.....v r targeting the tagName....
+
+ document.querySelector('#images').addEventListener('click' , function(e){ 
+    if(e.target.tagName === 'img'){
+        console.log(e.target.id); //if wanna consolelog and check
+        
+        let removeIt = e.target.parentNode
+        removeIt.remove();
+    }
+ },false);
+
+
+
+
+
+
+
+
+
+
+// document.getElementById('owl').onclick = function(){ //m2 in this method the onclick gives less feathers...
+//     alert('owl clicked');
+// }  
+
+
+//Notes:interview questions.....
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+// document.getElementById('owl').addEventListener('click',function(){    //m3 this is apporchable....
+//  alert('owl clicked again');     
+// }, false);  //here the false is default element....Event Propagation 
+
+
+// ---Event propagation in the DOM has three phases: capturing, target, and bubbling. 
+// Capturing Phase: The event travels down from the root of the DOM tree to the target element.
+// Target Phase: The event reaches the target element where it originated.
+// Bubbling Phase: The event travels back up the DOM tree, from the target element to the root.
+
+
+//eg:bubbling will be from inside to outside eg:li,ul,div so on li inside the ul n ul inside div...
+//bubblings gives first input last output....filo
+//     document.getElementById('images').addEventListener('click' , function(e){
+//     console.log('clicked in ul');
+// } , false);  //for bubbling
+
+// document.getElementById('owl').addEventListener('click' , function(e){
+//     console.log('clicked owl');
+// }, false);
+
+
+// //eg:capturing will gives you first input first output....fifo
+// document.getElementById('images').addEventListener('click' , function(e){
+//     console.log('clicked in ul');
+// }, true); //for capturing
+
+// document.getElementById('owl').addEventListener('click' , function(e){
+//     console.log('clicked owl');
+// }, true);
+
+// //eg:for stopping the Event Propagation of Capturing, Targeting and Bubbling...
+// document.getElementById('owl').addEventListener('click' , function(e){
+//     console.log('clicked owl');
+//    e.stopPropagation();
+// });
+
+// //preventDefault: stopping the event....
+// document.getElementById('google').addEventListener('click', function(e){
+//     e.preventDefault();  //it wont be  get the output
+//     e.stopPropagation(); //it wont be bubbling
+// },false);
+
+
+
+
+
+
+</script>
+</html>
