@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>2 projects with Async JS</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    //setTimeout - it used to take time and give output only onces......
+    //eg1: 
+    setTimeout(() => {
+    console.log("reet");
+    },2000);       //after 2ms the o/p will be display....
+
+    //eg2:
+    const sayReet = (() => {
+    console.log("reet");
+    });    
+    setTimeout(sayReet,2000) //giving refernces in handler(callback)......
+
+    const changeText = (() => {
+        document.querySelector('h1').
+        innerHTML = "js best code";
+    });
+    setTimeout(changeText,3000)
+
+    const changeMe =   setTimeout(changeText,3000)
+
+    document.getElementById('stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("stopped");
+    })
+
+    
+</script>
+</html>
