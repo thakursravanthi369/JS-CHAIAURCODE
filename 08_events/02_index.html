@@ -27,13 +27,13 @@
         document.querySelector('h1').
         innerHTML = "js best code";
     });
-    setTimeout(changeText,3000)
+    setTimeout(changeText,3000) //here v set the time n v get continous output.......to stop it v use clearTimeout
 
     const changeMe =   setTimeout(changeText,3000)
 
     document.getElementById('stop').addEventListener('click',function(){
         clearTimeout(changeMe);
-        console.log("stopped");
+        console.log("stopped");  //here v stopped the contionous output with the method of clearTimeout....
     })
 
     
