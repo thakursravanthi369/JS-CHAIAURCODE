@@ -11,6 +11,7 @@
 </body>
 <script>
 
+    //setTimeout schedules a single execution after a specified delay
     //setTimeout - it used to take time and give output only onces......
     //eg1: 
     setTimeout(() => {
@@ -27,13 +28,13 @@
         document.querySelector('h1').
         innerHTML = "js best code";
     });
-    setTimeout(changeText,3000) //here v set the time n v get continous output.......to stop it v use clearTimeout
+    setTimeout(changeText,3000) //here v set the time n v get single output.......to stop it v use clearTimeout
 
     const changeMe =   setTimeout(changeText,3000)
 
     document.getElementById('stop').addEventListener('click',function(){
         clearTimeout(changeMe);
-        console.log("stopped");  //here v stopped the contionous output with the method of clearTimeout....
+        console.log("stopped");  //here v stopped the single output with the method of clearTimeout....
     })
 
     
