@@ -51,7 +51,7 @@
 
 const promiseFour = new Promise(function(resolve,reject){
     setTimeout(function(){
-        let error = true
+        let error = true;
         if (!error) {
             resolve({
                 username : 'reethu' ,
@@ -71,7 +71,50 @@ promiseFour
 })
 .then((username) => {
 console.log(username);
-})
-.catch((error) => {
+}).catch((error) => {
 console.log(error);
+}).finally(() => {
+    console.log('The promise is either resolve or rejected');
 })
+
+//m5
+
+promiseFive = new Promise(function(resolve,reject) {  //v can use .then and async method.....
+    setTimeout(function(){
+        let error = true
+        if (!error) {
+            resolve({
+                username : 'js',
+                password : '0369'
+            })
+        }else{
+            reject('ERROR :JS went wrong')
+        }
+    },1000)
+})
+
+
+async  function cosumePromiseFive(){     //v can also get async method....
+    try {
+        const response = await promiseFive
+        console.log(response);
+    } catch (error) {
+        console.log('error');
+    }
+}
+
+
+cosumePromiseFive()
+
+async function getAllUsers(){
+try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        const data =await response.json()
+        console.log(data); 
+} catch (error) {
+    console.log('E: ',error);
+    
+}
+}
+
+getAllUsers()
